@@ -1,0 +1,30 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$(document).ready(main); //Toda vez que o documento for lido será chamado a função main
+
+var contador = 1; //Quando o contador mostrar 1 significa que o menu está aberto
+
+function main(){
+    $('.menu').click(function () {
+        if (contador == 1) {
+            $('nav').animate({
+                left: '0'
+            });
+            contador = 0;
+        } else {
+            contador = 1;
+            $('nav').animate({
+                left: '-100%'
+            });
+        }
+    });
+
+    // Mostramos y ocultamos submenus
+    $('.submenu').click(function () {
+        $(this).children('.children').slideToggle();
+    });
+}

@@ -1,0 +1,327 @@
+/* 
+    Created on : 08/08/2016, 18:10:34
+    Author     : GUILHERME SALVI FERNANDES <salviguilherme@outlook.com>
+*/
+
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=News+Cycle); /* font-family: 'News Cycle', sans-serif; */
+@import url(https://fonts.googleapis.com/css?family=Raleway:300); /* font-family: 'Raleway', sans-serif; */
+
+
+* {
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background:#ffffff;
+    height: 100%
+}
+
+.menu {
+    display:none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    font-family: 'Raleway', sans-serif;
+}
+
+header nav {
+    background: #333333;
+    z-index:1000;
+    width:100%;
+    margin:0 auto;
+}
+
+header nav ul {
+    list-style:none;
+    text-align: center;
+}
+
+header nav ul li {
+    display:inline-block;
+    position: relative;
+}
+
+header nav ul li:hover{
+    background:#51E1C9;
+}
+
+header nav ul li a{
+    color:#fff;
+    display:block;
+    text-decoration:none;
+    padding: 20px;
+}
+
+
+header nav ul li a span {
+    margin-right:10px;
+}
+
+
+header nav ul li:hover .children {
+    display:block;
+    background: #51E1C9;
+}
+
+header nav ul li:hover .children li:hover {
+    background: #333333;
+}
+
+header nav ul li .children {
+    display: none;
+    background:#333333;
+    position: absolute;
+    width: 150%;
+    z-index:1000;
+    text-align: left;
+}
+
+header nav ul li .children li {
+    display:block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+    display: block;
+}
+
+header nav ul li .children li a span {
+    float: right;
+    position: relative;
+    top:3px;
+    margin-right:0;
+    margin-left:10px;
+}
+
+header nav ul li .caret {
+    position: relative;
+    top:3px;
+    margin-left:10px;
+    margin-right:0px;
+}
+
+
+.btn {
+    margin-left: 15px;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 15px;
+    background: #51E1C9;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #51E1C9;
+    text-decoration: none;
+}
+
+
+#cabecalho #logo{
+    width: 70px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding-top: 80px;
+    }
+
+    #cabecalho #logo{
+        display: none;
+    }
+
+    .menu {
+        display:block;
+        width:100%;
+        position: fixed;
+        top:0;
+        background:#333333;
+    }
+
+    .menu .bt-menu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .menu span {
+        float: right;
+        font-size: 40px;
+    }
+
+    header nav {
+        width: 80%;
+        height: calc(100% - 80px);
+        position: fixed;
+        right:100%;
+        margin: 0;
+        overflow: scroll;
+    }
+
+    header nav ul{
+        text-align: left;
+    }
+
+    header nav ul li {
+        display: block;
+        border-bottom:1px solid rgba(255,255,255,.5);
+    }
+
+    header nav ul li a {
+        display: block;
+    }
+
+    header nav ul li:hover .children {
+        display: none;
+    }
+
+    header nav ul li .children {
+        width: 100%;
+        position: relative;
+    }
+
+    header nav ul li .children li a {
+        margin-left:20px;
+    }
+
+    header nav ul li .caret {
+        float: right;
+    }
+
+    .btn{
+        display: block;
+        position: relative;
+        margin-top: 50px;
+        margin-left: 0px;
+        text-align: center;
+    }
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/** formata elementos parallax **/
+.parallax{
+    /* Imagem usada como fundo */
+    background-image: url("../imagens/bg.jpg");
+
+    /* Altura minima */
+    min-height: 500px;
+
+    /* Criando efeito parallax scrolling */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #ffffff;
+
+}
+
+#parallaxFundo #titulo{
+    padding-top: 80px;
+}
+
+#parallaxFundo #titulo h1{
+    text-align: center;
+    font-size: 50pt;
+    padding-top: 20px;
+}
+
+#parallaxFundo img{
+    width: 150px;
+    height: 230px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+#parallaxFundo #titulo h2{
+    text-align: center;
+    font-size: 20pt;
+}
+
+#corpo{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Formatando o conteúdo */
+#conteudo{
+    width: 100%;
+    height: 800px;
+    background: #ffffff;
+}
+
+
+.artigo{
+    width: 100%;
+    color: #333333;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.artigo h2{
+    color: #51E1C9;
+    margin-bottom: 20px;
+}
+
+
+.artigo img{
+    width: 100px;
+    height: 100px;
+}
+
+.artigo #objetivo, .artigo #geolocalizacao, .artigo #appMobile{
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+}
+
+#oqueEh{
+    padding: 100px;
+    text-align: center;
+    color: #333333;
+}
+
+#oqueEh h1{
+    font-size: 50pt;
+    margin-bottom: 20px;
+}
+
+#oqueEh img{
+    width: 200px;
+    height: 200px;
+}
+
+/* Configuração do footer */
+
+footer{
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    background: #333333;
+    height: 150px;
+}
